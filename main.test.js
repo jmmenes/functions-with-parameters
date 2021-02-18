@@ -1,13 +1,28 @@
-/*
+let x = 3;
+let y = 10;
+let z = 5;
+let name = "John";
+let greeting = "HEY";
 
-Your code goes below.
+function multiply(num) {
+  x = x * num;
+}
 
-*/
+function modYBy(num) {
+  y = y % num;
+}
 
+function opposite(num) {
+  z = num * -1;
+}
 
+function makeFullName(string) {
+  name = name + " " + string;
+}
 
-
-
+function yellAt(string) {
+  greeting = greeting + "," + " " + string + "!";
+}
 
 /*********************************************************************************************************************
 
@@ -17,89 +32,87 @@ Your code goes below.
 
  *********************************************************************************************************************/
 
-if (typeof x === 'undefined') {
+if (typeof x === "undefined") {
   x = undefined;
 }
 
-if (typeof y === 'undefined') {
+if (typeof y === "undefined") {
   y = undefined;
 }
 
-if (typeof z === 'undefined') {
+if (typeof z === "undefined") {
   z = undefined;
 }
 
-if (typeof name === 'undefined') {
+if (typeof name === "undefined") {
   name = undefined;
 }
 
-if (typeof greeting === 'undefined') {
+if (typeof greeting === "undefined") {
   greeting = undefined;
 }
 
-
-if (typeof multiply === 'undefined') {
+if (typeof multiply === "undefined") {
   multiply = undefined;
 }
 
-if (typeof modYBy === 'undefined') {
+if (typeof modYBy === "undefined") {
   modYBy = undefined;
 }
 
-if (typeof opposite === 'undefined') {
+if (typeof opposite === "undefined") {
   opposite = undefined;
 }
 
-if (typeof makeFullName === 'undefined') {
+if (typeof makeFullName === "undefined") {
   makeFullName = undefined;
 }
 
-if (typeof yellAt === 'undefined') {
+if (typeof yellAt === "undefined") {
   yellAt = undefined;
 }
 
-if (typeof fullName === 'undefined') {
+if (typeof fullName === "undefined") {
   fullName = undefined;
 }
 
-if (typeof phoneCall === 'undefined') {
+if (typeof phoneCall === "undefined") {
   phoneCall = undefined;
 }
 
-
-describe('multiply', () => {
+describe("multiply", () => {
   it(`multiplies x by the given parameter'`, () => {
     multiply(15);
     multiply(3);
-    expect(x).toBe(135)
-  })
+    expect(x).toBe(135);
+  });
 });
 
-describe('modYBy', () => {
+describe("modYBy", () => {
   it(`runs a modulus operation on y`, () => {
     modYBy(4);
     expect(y).toEqual(2);
-  })
+  });
 });
 
-describe('opposite', () => {
+describe("opposite", () => {
   it(`sets z to the opposite of the given parameter`, () => {
     opposite(3);
     expect(z).toBe(-3);
-  })
+  });
 });
 
-describe('makeFullName', () => {
+describe("makeFullName", () => {
   it(`adds a space and the parameter to name`, () => {
     let oldName = name;
-    makeFullName('Jaffe')
-    expect(name).toBe(oldName + ' Jaffe');
-  })
+    makeFullName("Jaffe");
+    expect(name).toBe(oldName + " Jaffe");
+  });
 });
 
-describe('yellAt', () => {
+describe("yellAt", () => {
   it(`makes greeting into a string that yells the greeting at someone`, () => {
-    yellAt('Colin');
+    yellAt("Colin");
     expect(greeting).toEqual(`HEY, Colin!`);
-  })
+  });
 });
